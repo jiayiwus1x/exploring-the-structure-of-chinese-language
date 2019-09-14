@@ -1,1 +1,1 @@
-# Chinese-charactor-classification
+# Chinese-character-classification
