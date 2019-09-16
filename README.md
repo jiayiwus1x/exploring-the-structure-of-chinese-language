@@ -2,15 +2,15 @@
 
 ## Description
 
-I want to cluster Chinese characters so one can find the similarity between characters.Throught the clustering one can build connections between clusters and form a network. Possiblity through the ending network one can find the histories of how these character involve over time. This project is in progress.
+This project is an exploration in the relationships between Chinese logograms. We cluster Chinese characters and study the connections between the clusters in the underlying network. Potentially, we can observe how the histories of these characters evolve over time. This project is in progress.
 
 ## Data
 
-Data comes from this interesting post: [Making of a Chinese Characters dataset](https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc)
+The data comes from this interesting post: [Making of a Chinese Characters dataset](https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc)
 
 
 ## Contributing
 
 Please contact me if you have any good ideas about this project!
 
-## Futher reading
+## Further reading
