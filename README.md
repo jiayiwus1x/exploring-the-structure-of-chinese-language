@@ -1,4 +1,5 @@
 # Chinese-character-classification
+![](cluster_results.png)
 
 ## Description
 
