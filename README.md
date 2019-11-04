@@ -1,5 +1,5 @@
 # Exploring the structure of Chinese language
-![](cluster_results.png)
+![](/image/cluster_results.png)
 
 ## Description
 
@@ -18,7 +18,7 @@ I have put together a short demo of my proposal here. In the demo, I use a subse
 </p>
 The result is already beginning to look interesting! For example, we found words which are basic elements occupying the top left of Figure 2 while complex compound characters are on another side. Some words that share “亻” are clustered together in the center.
 
-![](cluster_results.png)
+![](image/cluster_results.png)
 
 <p align="center"> 
   Figure 2. A visualization of the result projected onto a two-dimensional axis.
