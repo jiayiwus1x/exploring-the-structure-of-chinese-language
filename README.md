@@ -28,7 +28,12 @@ There’s plenty of things left to explore for this project. We can get a more c
 
 I hope that through this project, we may understand the Chinese language better. Understanding the structure of the Chinese language is one step forward in our culture exchange! 
 
+## Usage
 
+Follow along [conv.ipynb](conv.ipynb) for a small CNN to classify the characters. 
+
+Follow along [cluster-feature.ipynb](cluster-feature.ipynb)
+I use the features from CNN as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space.  
 
 
 ## Data
