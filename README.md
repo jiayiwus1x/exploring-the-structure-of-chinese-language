@@ -13,7 +13,7 @@ I will be using the image dataset of roughly 34,000 Chinese characters found her
 
 I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 227 characters. I then trained a small CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third. I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. Figure 2 is a visualization of the result projected onto a two-dimensional axis. 
 
-![fig 1](/image/名.png) ![](/image/古.png) ![](/image/妻.png)
+![fig 1](/image/combined.png)
 
 The result is already beginning to look interesting! For example, we found words which are basic elements occupying the top left of Figure 2 while complex compound characters are on another side. Some words that share “亻” are clustered together in the center.
 
