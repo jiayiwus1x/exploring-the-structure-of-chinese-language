@@ -1,4 +1,4 @@
-# Chinese-character-classification
+# Exploring the structure of Chinese language
 ![](cluster_results.png)
 
 ## Description
