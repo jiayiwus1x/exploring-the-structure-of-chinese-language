@@ -1,5 +1,5 @@
 # Exploring the structure of Chinese language
-![](/image/cluster_results_Tsne_k_12.png)
+![](/image/cluster_results_Tsn_k_12.png)
 
 ## Description
 
