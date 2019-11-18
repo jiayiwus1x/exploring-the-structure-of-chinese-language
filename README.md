@@ -1,10 +1,5 @@
 # Exploring the structure of Chinese language
-![](/image/cluster_results_Tsn_k_12.png)
-
-<p align="center"> 
-  Clustering result of 1950 Chinese characters 
-</p>
-
+![](/image/dendrogram.gif)
 ## Description
 
 I’m very interested in the exchange of culture between the East and the West. As China’s economy grows, it becomes increasingly important for these two groups of ideas and people to embrace each other. The language is a great place to start! 
@@ -24,8 +19,7 @@ I have put together a short demo of my proposal here. In the demo, I use a subse
 </p>
 The result is already beginning to look interesting! For example, we found words which are basic elements occupying the top left of Figure 2 while complex compound characters are on another side. Some words that share “亻” are clustered together in the center.
 
-![](image/cluster_results.png)
-
+![](/image/cluster_results_Tsn_k_12.png)
 <p align="center"> 
   Figure 2. A visualization of the result projected onto a two-dimensional axis.
 </p>
