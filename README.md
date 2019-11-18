@@ -1,5 +1,8 @@
 # Exploring the structure of Chinese language
-![](/image/dendrogram.gif)
+<p align="center">
+  <img src="/image/dendrogram.gif">
+</p>
+
 ## Description
 
 I’m very interested in the exchange of culture between the East and the West. As China’s economy grows, it becomes increasingly important for these two groups of ideas and people to embrace each other. The language is a great place to start! 
