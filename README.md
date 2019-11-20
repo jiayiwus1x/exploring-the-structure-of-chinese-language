@@ -42,6 +42,10 @@ Follow along [cluster-feature.ipynb](cluster-feature.ipynb)
 I use the features from CNN as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space.  
 
 
+Follow along [cluster-feature-dendrogram.ipynb](cluster-feature-dendrogram.ipynb)
+I also cluster the features using hierarchical clustering and plot the result using a interactive dendogram.
+
+
 ## Data
 
 The data comes from this interesting post: [Making of a Chinese Characters dataset](https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc)
