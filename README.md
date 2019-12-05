@@ -11,25 +11,28 @@ While most Western languages are phonetic, the Chinese Language uses logograms. 
 
 For my capstone project, I propose to use Unsupervised Machine Learning to unravel this structure and ultimately make the Chinese language easier to learn and understand by relating the meaning of words with their characters.
 
-I will be using the image dataset of roughly 34,000 Chinese characters found here: https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc. Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.  
+I will be using the image dataset of roughly 34,000 Chinese characters found here: https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc. Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.
 
-I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 227 characters. I then trained a small CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third. I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. Figure 2 is a visualization of the result projected onto a two-dimensional axis. 
+I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 1950 characters. I used 2.3 million image in total. I then trained a CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third.
 
 
 ![fig 1](/image/combined.png)
 <p align="center">
   Figure 1. feature maps applied to 名, 古, 妻. 
 </p>
-The result is already beginning to look interesting! For example, we found words which are basic elements occupying the top left of Figure 2 while complex compound characters are on another side. Some words that share “亻” are clustered together in the center.
+
+Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 7%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2.
 
 ![](/image/cluster_results_Tsn_k_12.png)
 <p align="center"> 
   Figure 2. A visualization of the result projected onto a two-dimensional axis.
 </p>
 
-There’s plenty of things left to explore for this project. We can get a more complete picture of the language by using the full dataset. We may get better results by tuning the architecture of the CNN or trying out different unsupervised learning techniques. There’s also the question of what is the best representation of the final results? The feature maps are extremely high dimensional. In Figure 2, I’ve projected the features using PCA however the variance explained by the two axis is only 7%. Many characters in Chinese are actually phono-semantic as well. We can potentially augment this analysis using natural language processing techniques. 
+I also tried using hierarchical clustering, which lends itself to more natural plotting. A video of a dendrogram plotting the results in displayed at the beginning. The results look very interesting already! In both cases, the Characters are well organized in a way that makes intuitive sense. What’s really amazing is that I only needed to use 16 features to get both good classification and clustering results for 2000 characters!
 
-I hope that through this project, we may understand the Chinese language better. Understanding the structure of the Chinese language is one step forward in our culture exchange! 
+There’s plenty of things left to explore for this project. We can get a more complete picture of the language by using the full dataset. I would like to add the meaning of the words next to each cluster and eventually turn the results into a product to help people understand and learn Chinese better. Many characters in Chinese are actually phono-semantic as well. Some of the variance in the clusters cannot be explained just by visual features, but we can potentially augment this analysis using natural language processing techniques!
+
+I hope that through this project, we may understand the Chinese language better. Understanding the structure of the Chinese language is one step forward in our culture exchange!
 
 ## Usage
 
@@ -37,6 +40,10 @@ Follow along [conv.ipynb](conv.ipynb) for a small CNN to classify the characters
 
 Follow along [cluster-feature.ipynb](cluster-feature.ipynb)
 I use the features from CNN as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space.  
+
+
+Follow along [cluster-feature-dendrogram.ipynb](cluster-feature-dendrogram.ipynb)
+I also cluster the features using hierarchical clustering and plot the result using a interactive dendogram.
 
 
 ## Data
