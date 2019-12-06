@@ -21,11 +21,11 @@ I have put together a short demo of my proposal here. In the demo, I use a subse
   Figure 1. feature maps applied to 名, 古, 妻. 
 </p>
 
-Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 7%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2.
+Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 7%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2 or [click here for an interactive web app.](https://jiayiwus1x.github.io/exploring-the-structure-of-chinese-language/)
 
 ![](/image/cluster_results_Tsn_k_12.png)
 <p align="center"> 
-  Figure 2. A visualization of the result projected onto a two-dimensional axis.
+  Figure 2. A visualization of the result projected onto a two-dimensional axis. 
 </p>
 
 I also tried using hierarchical clustering, which lends itself to more natural plotting. A video of a dendrogram plotting the results in displayed at the beginning. The results look very interesting already! In both cases, the Characters are well organized in a way that makes intuitive sense. What’s really amazing is that I only needed to use 16 features to get both good classification and clustering results for 2000 characters!
