@@ -30,6 +30,16 @@ Initially, I use these features as a basis to compute distances between all of t
 
 I also tried using hierarchical clustering, which lends itself to more natural plotting. A video of a dendrogram plotting the results in displayed at the beginning. The results look very interesting already! In both cases, the Characters are well organized in a way that makes intuitive sense. What’s really amazing is that I only needed to use 16 features to get both good classification and clustering results for 2000 characters!
 
+I tested how well is the clustering using SSE. While k-mean did better with fewer clusters, hierarchical clustering doing better for more cluster. This makes intuitive sense because hierarchical clustering is a much greedy algorithm than k-mean. Because of this I decide to use k-mean to make larger clusters from the original dataset, then I use hierarchical clustering to further define smaller clusters within the big cluster.
+<p align="center">
+  <img src="/image/k-mean-vs-hierarchical-clus.png"| width=400>
+</p>
+<p align="center"> 
+  Figure 3. SSE of k-mean vs hierarchical clustering
+</p>
+
+
+
 There’s plenty of things left to explore for this project. We can get a more complete picture of the language by using the full dataset. I would like to add the meaning of the words next to each cluster and eventually turn the results into a product to help people understand and learn Chinese better. Many characters in Chinese are actually phono-semantic as well. Some of the variance in the clusters cannot be explained just by visual features, but we can potentially augment this analysis using natural language processing techniques!
 
 I hope that through this project, we may understand the Chinese language better. Understanding the structure of the Chinese language is one step forward in our culture exchange!
