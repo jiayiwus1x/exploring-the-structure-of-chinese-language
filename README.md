@@ -1,6 +1,6 @@
 # Exploring the structure of Chinese language
 <p align="center">
-  <img src="/image/dendrogram.gif">
+  <img src="/static/dendrogram.gif">
 </p>
 
 ## Description
@@ -16,14 +16,14 @@ I will be using the image dataset of roughly 34,000 Chinese characters found her
 I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 1950 characters. I used 2.3 million image in total. I then trained a CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third.
 
 
-![fig 1](/image/combined.png)
+![fig 1](/static/combined.png)
 <p align="center">
   Figure 1. feature maps applied to 名, 古, 妻. 
 </p>
 
 Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 5%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2 or [click here for an interactive plot.](https://jiayiwus1x.github.io/exploring-the-structure-of-chinese-language/Chinese_clusters.htm)
 
-![](/image/cluster_results_Tsn_k_12.png)
+![](/static/cluster_results_Tsn_k_12.png)
 <p align="center"> 
   Figure 2. A visualization of the result projected onto a two-dimensional axis. 
 </p>
@@ -32,7 +32,7 @@ I also tried using hierarchical clustering, which lends itself to more natural p
 
 I tested how well is the clustering using SSE. While k-mean did better with fewer clusters, hierarchical clustering doing better for more cluster. This makes intuitive sense because hierarchical clustering is a much greedy algorithm than k-mean. Because of this I decide to use k-mean to make larger clusters from the original dataset, then I use hierarchical clustering to further define smaller clusters within the big cluster.
 <p align="center">
-  <img src="/image/k-mean-vs-hierarchical-clus.png"| width=400>
+  <img src="/static/k-mean-vs-hierarchical-clus.png"| width=400>
 </p>
 <p align="center"> 
   Figure 3. SSE of k-mean vs hierarchical clustering
