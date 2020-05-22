@@ -11,7 +11,7 @@ While most Western languages are phonetic, the Chinese Language uses logograms. 
 
 For my capstone project, I propose to use Unsupervised Machine Learning to unravel this structure and ultimately make the Chinese language easier to learn and understand by relating the meaning of words with their characters.
 
-I will be using the image dataset of roughly 34,000 Chinese characters found here: https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc. Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.
+I will be using the image dataset of roughly 34,000 Chinese characters found [here](https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc). Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.
 
 I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 1950 characters. I used 2.3 million image in total. I then trained a CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third.
 
