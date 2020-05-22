@@ -66,3 +66,4 @@ The data comes from this interesting post: [Making of a Chinese Characters datas
 Please contact me if you have any good ideas about this project!
 
 ## Further reading
+Please check out the web app developed from this here: https://chinese-cluster-jiayi.herokuapp.com/
