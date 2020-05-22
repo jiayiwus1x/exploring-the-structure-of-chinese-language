@@ -11,7 +11,7 @@ While most Western languages are phonetic, the Chinese Language uses logograms. 
 
 For my capstone project, I propose to use Unsupervised Machine Learning to unravel this structure and ultimately make the Chinese language easier to learn and understand by relating the meaning of words with their characters.
 
-I will be using the image dataset of roughly 34,000 Chinese characters found here: https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc. Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.
+I will be using the image dataset of roughly 34,000 Chinese characters found [here](https://blog.usejournal.com/making-of-a-chinese-characters-dataset-92d4065cc7cc). Convolutional Neural Networks (CNN) are very powerful feature extractors for visual data. The idea is to take the feature maps of a CNN trained to classify Chinese characters and use the techniques of Unsupervised Learning to reveal the relationships between different logograms.
 
 I have put together a short demo of my proposal here. In the demo, I use a subset of the images that covers a diverse set of 1950 characters. I used 2.3 million image in total. I then trained a CNN to classify the characters. In Figure 1, I plot the feature maps applied to 名, 古, 妻. Note that the first two look much closer to each other than the third.
 
@@ -21,7 +21,7 @@ I have put together a short demo of my proposal here. In the demo, I use a subse
   Figure 1. feature maps applied to 名, 古, 妻. 
 </p>
 
-Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 5%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2 or [click here for an interactive plot.](https://jiayiwus1x.github.io/exploring-the-structure-of-chinese-language/Chinese_clusters.htm)
+Initially, I use these features as a basis to compute distances between all of the characters and then use the k-means algorithm to cluster the characters in feature space. The feature maps are extremely high dimensional and projecting the results down to a low dimensional space for visualization is a challenge. I initially used a projection based on PCA however the variance the first two components is only 5%. I eventually settled on using t-SNE to embed my data in 2-dimensions which is shown in Figure 2 or [click here for an interactive plot.](https://chinese-cluster-jiayi.herokuapp.com/embed_plot)
 
 ![](/static/cluster_results_Tsn_k_12.png)
 <p align="center"> 
@@ -66,3 +66,4 @@ The data comes from this interesting post: [Making of a Chinese Characters datas
 Please contact me if you have any good ideas about this project!
 
 ## Further reading
+Please check out the web app developed from this here: https://chinese-cluster-jiayi.herokuapp.com/
