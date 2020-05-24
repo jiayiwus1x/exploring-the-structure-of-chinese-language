@@ -1,6 +1,4 @@
-
 from torch import nn
-
 
 size_IMG = 24
 depth_1 = 16
@@ -35,4 +33,4 @@ class ConvNet(nn.Module):
         out = self.fc1(out)
         out = self.fc2(out)
 
-        return out#, conv_x, max_pool_x
+        return out #, conv_x, max_pool_x
